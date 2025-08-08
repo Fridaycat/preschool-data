@@ -19,7 +19,7 @@ jobs:
       - name: Install matching ChromeDriver 139
         uses: browser-actions/setup-chromedriver@v1
         with:
-          chromedriver-version: '138'
+          chromedriver-version: '139'
 
       - name: Setup Python 3.10
         uses: actions/setup-python@v4
