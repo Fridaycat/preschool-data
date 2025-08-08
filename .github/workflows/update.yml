@@ -1,15 +1,14 @@
 name: Preschool Data Scraper
 
 on:
-  workflow_dispatch:    # 手動觸發，也可加 schedule 定時跑
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
