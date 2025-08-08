@@ -1,14 +1,18 @@
-name: Preschool Data Scraper
-
-on:
-  workflow_dispatch:
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install Chrome 138
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: '138'
+
+      - name: Install matching ChromeDriver 138
+        uses: browser-actions/setup-chromedriver@v1
+        with:
+          chromedriver-version: '138'
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
